@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Day 5</title>
+</head>
+
+<body>
+    <h3>Task 1</h3>
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+            document.write(i + "<br>");
+        }
+    </script>
+    <h3>Task 2</h3>
+    <script>
+        for (let j = 2; j <= 20; j += 2) {
+            console.log(j);
+            document.write(j + "<br>");
+        }
+    </script>
+    <h3>Task 3</h3>
+    <script>
+        let k = 10;
+        while (k >= 1) {
+            console.log(k);
+            k--;
+            document.write(k + "<br>");
+        }
+    </script>
+    <h3>Task 4</h3>
+    <script>
+        let count = 1;
+        do {
+            console.log("Hello World");
+            document.write("Hello World" + "<br>");
+
+            count++;
+        } while (count <= 5);
+    </script>
+    <h3>Task 5</h3>
+    <script>
+        let fruits = ["Apple ", "Orange ", "Guava ", "Cherry "];
+        for (let fruit of fruits) {
+            console.log(fruit);
+            document.write(fruit + "<br>");
+        }
+    </script>
+    <h3>Task 6</h3>
+    <script>
+        let stud = { name: "jay", age: 20, course: "AI" };
+        for (let key in stud) {
+            console.log(key + ":", stud[key]);
+            document.write(key + ":", stud[key] + "<br>");
+        }
+    </script>
+
+    <h3>Task 7</h3>
+    <script>
+        let total = 0;
+        for (let l = 1; l <= 10; l++) {
+            total += l;
+            console.log(total);
+            document.write(total + "<br>");
+        }
+    </script>
+
+    <h3>Task 8</h3>
+    <script>
+        let numbers = [10, 25, 53, 55, 60, 70];
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] > 50) {
+                console.log("First number greater than 50 is:", numbers[i]);
+                document.write("First number greater than 50 is:", numbers[i]);
+                break;
+            }
+        }
+    </script>
+
+    <h3>Task 9</h3>
+    <script>
+        for (let i = 1; i <= 15; i++) {
+            if (i % 3 === 0) {
+                continue;
+            }
+            console.log(i);
+            document.write(i + "<br>");
+        }
+    </script>
+
+    <h3>Task 10</h3>
+    <script>
+        for (let a = 1; a <= 10; a++) {
+            console.log("5 * " + a + " = " + a * 5);
+            document.write("5 * " + a + " = " + a * 5 + "<br>");
+        }
+    </script>
+
+    <h3>Task 11</h3>
+    <script>
+        let str = "WELCOME";
+        let reversed = "";
+        for (let i = str.length - 1; i >= 0; i--) {
+            reversed += str[i];
+        }
+        console.log("Original string:", str);
+        document.write(str + "<br>");
+        console.log("Reversed string:", reversed);
+        document.write(reversed + "<br>");
+    </script>
+
+    <h3>Task 12</h3>
+    <script>
+        let str1 = "Hello World- WELCOME";
+        let count1 = 0;
+        let vowels = "aeiouAEIOU";
+
+        for (let i = 0; i < str1.length; i++) {
+            if (vowels.includes(str1[i])) {
+                count1++;
+            }
+        }
+        console.log("Number of vowels:", count1);
+        document.write("Number of vowels:", count1);
+    </script>
+
+    <h3>Task 13</h3>
+    <script>
+        let number = [12, 45, 67, 23, 89, 134];
+        let largest = number[0]; // assume first element is largest
+
+        for (let i = 1; i < number.length; i++) {
+            if (number[i] > largest) {
+                largest = number[i];
+            }
+        }
+
+        console.log("The largest number is:", largest);
+        document.write("The largest number is:", largest);
+
+    </script>
+    <h3>TAsk 14</h3>
+    <script>
+        for (let b = 1; b <= 50; b++) {
+            if (b % 2 !== 0) {
+                console.log(b);
+                document.write(b + "<br>");
+            }
+        }
+    </script>
+
+    <h3>Task 15</h3>
+    <script>
+        let sum = 0;
+
+        for (let i = 2; i <= 100; i += 2) {
+            sum += i;
+        }
+
+        console.log("The sum of even numbers between 1 and 100 is:", sum);
+        document.write("The sum of even numbers between 1 and 100 is:", sum) 
+    </script>
+
+</body>
+
+</html>
