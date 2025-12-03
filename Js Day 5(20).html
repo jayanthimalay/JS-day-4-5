@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Day 6</title>
+</head>
+
+<body>
+    <h3>Task 1 - Print Hello World</h3>
+    <script>
+        function greet() {
+            console.log("HELLO WORLD");
+            document.write("HELLO WORLD");
+        }
+        greet();
+    </script>
+    <hr>
+    <h3>Task 2 - Find cube</h3>
+    <script>
+        function cube(num) {
+            return num * num * num;
+        }
+        console.log(cube(4));
+        document.write(cube(4));
+    </script>
+    <hr>
+    <h3>Task 3 - Check even or odd</h3>
+    <script>
+        function checkevenodd(num) {
+            if (num % 2 === 0) {
+                return "Even";
+            } else {
+                return "Odd";
+            }
+        }
+        console.log(checkevenodd(4));
+        document.write(checkevenodd(4), "<br>");
+        console.log(checkevenodd(9));
+        document.write(checkevenodd(9));
+    </script>
+    <hr>
+    <h3>Task 4 - Factorial Number</h3>
+    <script>
+        function factorial(num) {
+            if (num < 0) {
+                return "Factorial is not defined for negative numbers";
+            }
+
+            let result = 1;
+            for (let i = 1; i <= num; i++) {
+                result *= i;
+            }
+            return result;
+        }
+        console.log(factorial(5));
+        console.log(factorial(0));
+        document.write(factorial(5), "<br>");
+        document.write(factorial(0)); 
+    </script>
+    <hr>
+    <h3>Task 5 - Sum of two numbers</h3>
+    <script>
+        const add = (a, b) => a + b;
+        console.log(add(34, 67));
+        document.write(add(34, 67));
+    </script>
+    <hr>
+    <h3>Task 6 - Largest of 3 Numbers</h3>
+    <script>
+        function largestOfThree(a, b, c) {
+            if (a >= b && a >= c) {
+                return a;
+            } else if (b >= a && b >= c) {
+                return b;
+            } else {
+                return c;
+            }
+        }
+        console.log(largestOfThree(5, 9, 3));
+        document.write(largestOfThree(5, 9, 3), "<br>");
+        console.log(largestOfThree(-2, -8, -1));
+        document.write(largestOfThree(-2, -8, -1));
+    </script>
+    <hr>
+    <h3>Task 7 - Palindrome</h3>
+    <script>
+        function isPalindrome(str) {
+            let reversed = str.split('').reverse().join('');
+            return str === reversed;
+        }
+        console.log(isPalindrome("madam"));
+        document.write(isPalindrome("madam"));          
+    </script>
+    <hr>
+
+    <h3>Task 8 - celsius to Fahrenheit</h3>
+    <script>
+        const celsiusToFahrenheit = (celsius) => (celsius * 9 / 5) + 32;
+        console.log(celsiusToFahrenheit(120));
+        document.write(celsiusToFahrenheit(120));
+    </script>
+    <hr>
+
+    <h3>Task 9 - Calculate Simple interest</h3>
+    <script>
+        function SI(p, r, t) {
+            return (p * r * t) / 100;
+        }
+        console.log(SI(1000, 5, 2));
+        document.write(SI(1000, 5, 2));
+    </script>
+    <hr>
+    <h3>Task 10 - Reverse an Array</h3>
+    <script>
+        function reversearray(arr) {
+            return arr.reverse();
+        }
+        console.log(reversearray([1, 2, 3, 4, 5]));
+        document.write(reversearray([1, 2, 3, 4, 5]));
+    </script>
+    <hr>
+
+    <h3>Task 11 -Count number of vowels </h3>
+    <script>
+        function countVowels(str) {
+            return str.split('').filter(c => 'aeiouAEIOU'.includes(c)).length;
+        }
+        console.log(countVowels("Hello World"));
+        document.write(countVowels("Hello World"));
+    </script>
+    <hr>
+
+    <h3>Task 12 - Doubles each number in an array</h3>
+    <script>
+        const doubleNumbers = arr => arr.map(num => num * 2);
+        console.log(doubleNumbers([1, 2, 3, 4]));
+        document.write(doubleNumbers([1, 2, 3, 4]));
+    </script>
+    <hr>
+
+    <h3>Task 13 - </h3>
+    <script>
+        function runcallback(callback) {
+            callback();
+        }
+        runcallback(() => {
+            console.log("HELLO");
+            document.write("HELLO");
+        });
+    </script>
+
+    <h3>Task 14 - Max of 3 numbers</h3>
+    <script>
+        function Max(a, b, c) {
+            if (a >= b && a >= c) {
+                return a;
+            } else if (b >= a && b >= c) {
+                return b;
+            } else {
+                return c;
+            }
+        }
+        console.log(Max(10, 25, 15));
+        document.write(Max(10, 25, 15));
+    </script>
+    <hr>
+
+    <h3>Task 15 - Palindrome</h3>
+    <script>
+        function isPalindrome(str) {
+            let reversed = str.split('').reverse().join('');
+            return str === reversed;
+        }
+        console.log(isPalindrome("coffee"));
+        document.write(isPalindrome("coffee"));          
+    </script>
+    <hr>
+
+    <h3>Task 16 - Area Of a Circle</h3>
+    <script>
+        function area(radius) {
+            return Math.PI * radius * radius;
+        }
+        console.log(area(7));
+        document.write(area(7));
+    </script>
+
+    <h3>Task 17 - Captitalize first letter</h3>
+    <script>
+        function capital(sentence) {
+            return sentence.split("")
+                .map(word => word[0].toUpperCase() + word.slice(1))
+                .join(" ");
+        }
+        console.log(capital("hello everyone"));
+        document.write(capital("hello everyone"));
+    </script>
+    <hr>
+    <h3>Task 18 - </h3>
+    <script>
+        function reversestr(str) {
+            return str.split("").reverse().join("");
+        }
+        console.log(reversestr("hello"));
+        document.write(reversestr("hello"));
+    </script>
+    <hr>
+
+    <h3>Task 19 -counts vowels and consonants </h3>
+    <script>
+        function countVowelsAndConsonants(str) {
+            const vowels = "aeiouAEIOU";
+            const chars = str.split("");
+
+            const vowelCount = chars.filter(ch => vowels.includes(ch)).length;
+            const consonantCount = chars.filter(ch => /[a-zA-Z]/.test(ch) && !vowels.includes(ch)).length;
+
+            return { vowels: vowelCount, consonants: consonantCount };
+        }
+        console.log(countVowelsAndConsonants("Hello World"));
+        document.write(countVowelsAndConsonants("Hello World"));
+    </script>
+    <hr>
+
+    <h3>Task 20 - </h3>
+    <script>
+        function isPrime(num) {
+            if (num <= 1) return false; 
+
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    return false; 
+                }
+            }
+            return true; 
+        }
+
+        // Example
+        console.log(isPrime(2));
+        document.write(isPrime(2),"<br>");   
+        console.log(isPrime(15)); 
+        document.write(isPrime(15),"<br>"); 
+        console.log(isPrime(17)); 
+        document.write(isPrime(17)); 
+
+    </script>
+    <hr>
+</body>
+
+</html>
